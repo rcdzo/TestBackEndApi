@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using SimpleInjector;
 using System;
 using System.IO;
 using System.Reflection;
@@ -21,7 +20,7 @@ namespace TestBackEndApi.Api
     public class Startup
     {
 
-        private Container container = new Container();
+       
         public Startup(IConfiguration configuration)
         {
 
