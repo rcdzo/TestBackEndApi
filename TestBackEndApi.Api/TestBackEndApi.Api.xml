@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestBackEndApi.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TestBackEndApi.Api.Controllers.CepController.GetResponseJson(TestBackEndApi.Domain.Queries.Cep.Get.GetCepQuery)">
+             <summary>
+             Busca as informações formato JSON
+             </summary>
+             <remarks>
+             Exemplo requisicao:
+            
+                 GetResponseJson 
+                 {
+               		"cep": "",
+               		"logradouro": "",
+               		"complemento": "",
+               		"bairro": "",
+               		"localidade": "",
+               		"mensagens": [
+               		  {
+               		    "mensagem": ""
+               		  }
+               		]      
+                 }
+            
+             </remarks>
+             <param name="query"></param>
+             <returns>A newly created TodoItem</returns>
+             <response code="200">Retorna quando consegue obter o valor da api sem erros</response>
+             <response code="400">Se o retorno for null</response>
+             <response code="500">Se o paramentro da connsultar não for preenchido</response>      
+        </member>
+        <member name="M:TestBackEndApi.Api.Controllers.CepController.GetResponseXml(TestBackEndApi.Domain.Queries.Cep.Get.GetCepQuery)">
+             <summary>
+             Retorna as informações no formato XML
+             </summary>
+             <remarks>
+             Exemplo requisicao:
+            
+                 GetResponseXml
+                 {
+                    <GetCepQueryResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                         <Cep>25720-200</Cep>
+                         <Logradouro>Rua Visconde de Taunay</Logradouro>
+                         <Complemento />
+                         <Bairro>Corrêas</Bairro>
+                         <Localidade>Petrópolis - RJ</Localidade>
+                         <Mensagens>
+                             <MensagemQueryResponse>
+                                 <Mensagem>Sucesso</Mensagem>
+                             </MensagemQueryResponse>
+                         </Mensagens>
+                     </GetCepQueryResponse>
+                 }
+            
+             </remarks>
+             <param name="query"></param>
+             <returns>A newly created TodoItem</returns>
+             <response code="200">Retorna quando consegue obter o valor da api sem erros</response>
+             <response code="404">Se o retorno for null</response>
+             <response code="400">Se o paramentro da connsultar não for preenchido</response>
+        </member>
+    </members>
+</doc>
